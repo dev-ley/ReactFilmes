@@ -3,26 +3,34 @@
   display: grid;
   flex-direction: column;
   max-width: 600px;
+  width: 80%;
   margin: 2rem auto;
+
 }
 
 .movie-page svg {
   font-size: 1.5rem;
-  color: #f7d354;
+  color: #30cbff;
 }
 
 .movie-page .movie-card {
   text-align: center;
 }
 
-.movie-page .movie-card img,
+.movie-page,
 .movie-page .movie-card h2,
 .movie-page .movie-card p {
   margin-bottom: 1rem;
 }
 
+.movie-card img{
+  width: 100%;
+}
+
 .movie-page .movie-card h2 {
   font-size: 2rem;
+  text-shadow: 1px 1px 10px #a3f8f6;
+
 }
 
 .movie-page .movie-card p {

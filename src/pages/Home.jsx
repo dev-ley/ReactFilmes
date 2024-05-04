@@ -2,7 +2,21 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
 import './MovieGrid.css';
+import styled from 'styled-components';
 
+const Container = styled.div`
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+`;
+const ContainerTitle = styled.h2`
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    text-shadow: 1px 1px 10px #a3f8f6;
+`;
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -22,13 +36,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container">
-      <h2 className="title">Melhores filmes:</h2>
+    <Container >
+      <ContainerTitle>Melhores filmes:</ContainerTitle>
       <div className="movies-container">
         {topMovies.length > 0 &&
           topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>
-    </div>
+    </Container>
   );
 };
 
