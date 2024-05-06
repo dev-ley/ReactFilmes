@@ -12,8 +12,8 @@ const Container = styled.div`
     font-size: 2.5rem;
     text-align: center;
     margin: 2rem 0 1rem;
-    
 `;
+
 const ContainerTitle = styled.h2`
     color: #fff;
     font-size: 2.5rem;
@@ -33,11 +33,27 @@ const MoviesContainer = styled.div`
 const TextQuery = styled.span`
       color: #30cbff;
       text-shadow: 0 0 0;
-`
+`;
 
-const ConteinerMedia = styled.div`
+const ContainerMedia = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 
-`
+  @media screen and (min-width: 481px) and (max-width: 1000px) {
+      width: 48%; 
+      margin-bottom: 2rem;
+    }
+
+  @media screen and (min-width: 1001px) {
+      width: 33%;
+      margin-bottom: 2rem; 
+    }
+  @media screen and (min-width: 1501px) {
+      width: 20%;
+      margin-bottom: 2rem; 
+    }
+ `;
 
 
 const Search = () => {
@@ -64,9 +80,9 @@ const Search = () => {
       </ContainerTitle>
       <MoviesContainer>
         {movies.length > 0 &&
-          movies.map((movie) => <ConteinerMedia>
+          movies.map((movie) => <ContainerMedia>
             <MovieCard key={movie.id} movie={movie} />
-          </ConteinerMedia>)}
+          </ContainerMedia>)}
       </MoviesContainer>
     </Container>
   );

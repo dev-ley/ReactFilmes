@@ -43,7 +43,8 @@ const ContainerMedia = styled.div`
       width: 20%;
       margin-bottom: 2rem; 
     }
- `
+ `;
+ 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
