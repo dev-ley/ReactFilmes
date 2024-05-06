@@ -25,7 +25,7 @@ O projeto ReactFilmes é uma aplicação desenvolvida em ReactJS que utiliza a A
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests para sugestões, correções ou melhorias.
 
 ## Autor
-Desenvolvido por [Seu Nome](https://github.com/seu-usuario).
+Desenvolvido por [Wesley Rodrigues](https://github.com/dev-ley).
 
 ## Licença
 Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
