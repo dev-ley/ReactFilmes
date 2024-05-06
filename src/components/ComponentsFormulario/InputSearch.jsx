@@ -37,6 +37,15 @@ const BntRec = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #00a6ff;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+  &:hover {
+    background-color: #a3f8f6;
+    border: 2px solid #00a6ff;
+  }
 `;
 
 const RecordingModal = styled.div`
@@ -95,8 +104,8 @@ const SpeechInput = () => {
       <InputButton type="submit">
         <BiSearchAlt2 />
       </InputButton>
-      <BntRec onClick={startListening}>
-        <IoMdMic size={20} />
+      <BntRec  onClick={startListening}>
+        <IoMdMic size={20}  color='' />
       </BntRec>
       {listening && (
         <RecordingModal>

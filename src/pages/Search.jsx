@@ -5,7 +5,40 @@ import MovieCard from '../components/MovieCard';
 const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
-import './MovieGrid.css';
+import styled from 'styled-components';
+
+const Container = styled.div`
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    
+`;
+const ContainerTitle = styled.h2`
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    text-shadow: 0px px 0px #a3f8f6;
+`;
+
+const MoviesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  margin: 0 auto;
+`;
+
+const TextQuery = styled.span`
+      color: #30cbff;
+      text-shadow: 0 0 0;
+`
+
+const ConteinerMedia = styled.div`
+
+`
+
 
 const Search = () => {
   const [searchParams] = useSearchParams();
@@ -25,15 +58,17 @@ const Search = () => {
   }, [query]);
 
   return (
-    <div className="container">
-      <h2 className="title">
-        Resultados para: <span className="query-text">{query}</span>
-      </h2>
-      <div className="movies-container">
+    <Container>
+      <ContainerTitle>
+        Resultados para: <TextQuery className="query-text">{query}</TextQuery>
+      </ContainerTitle>
+      <MoviesContainer>
         {movies.length > 0 &&
-          movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
-      </div>
-    </div>
+          movies.map((movie) => <ConteinerMedia>
+            <MovieCard key={movie.id} movie={movie} />
+          </ConteinerMedia>)}
+      </MoviesContainer>
+    </Container>
   );
 };
 

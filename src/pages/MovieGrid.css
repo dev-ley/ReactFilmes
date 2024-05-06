@@ -9,14 +9,6 @@
     color: #30cbff;
   }
   
-  .movies-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
   
   .movies-container div {
     width: 30%;
