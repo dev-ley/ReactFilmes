@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import styled from 'styled-components';
 import MovieCard from '../components/MovieCard';
 
 const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
-import styled from 'styled-components';
 
 const Container = styled.div`
     color: #fff;
@@ -55,7 +55,6 @@ const ContainerMedia = styled.div`
     }
  `;
 
-
 const Search = () => {
   const [searchParams] = useSearchParams();
 
@@ -80,9 +79,7 @@ const Search = () => {
       </ContainerTitle>
       <MoviesContainer>
         {movies.length > 0 &&
-          movies.map((movie) => <ContainerMedia>
-            <MovieCard key={movie.id} movie={movie} />
-          </ContainerMedia>)}
+          movies.map((movie) => <ContainerMedia><MovieCard key={movie.id} movie={movie}/></ContainerMedia>)}
       </MoviesContainer>
     </Container>
   );
